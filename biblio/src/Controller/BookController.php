@@ -14,6 +14,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class BookController extends AbstractController
 {
     //Получение списка всех книг и вывод их на главную страницу
+<<<<<<< HEAD
+=======
+    // Входные данные
+    // BookRepository
+    // Выходные данные
+    // Форма с информацией о всех книгах
+>>>>>>> f07c1e0 (Initial commit)
     #[Route('/', name: 'app_book_index', methods: ['GET'])]
     public function index(BookRepository $bookRepository): Response
     {
@@ -23,6 +30,14 @@ class BookController extends AbstractController
     }
 
     //создание новой книги
+<<<<<<< HEAD
+=======
+    // Входные данные
+    // BookRepository
+    // Request - нужно для получения информации о залогинившемся пользователе
+    // Выходные данные
+    // Форма с информацией о конкретной книге
+>>>>>>> f07c1e0 (Initial commit)
     #[Route('/new', name: 'app_book_new', methods: ['GET', 'POST'])]
     public function new(Request $request, BookRepository $bookRepository): Response
     {
@@ -46,6 +61,15 @@ class BookController extends AbstractController
     }
 
     //редактировать книгу
+<<<<<<< HEAD
+=======
+    // Входные данные
+    // BookRepository
+    // book - (объект) конкретная книга, информацию о которой нужно изменить
+    // request - нужно для получения информации о залогинившемся пользователе
+    // Выходные данные
+    // Форма с информацией о конкретной книге, если получилось добавить книгу, или информация о всех книгах пользователя
+>>>>>>> f07c1e0 (Initial commit)
     #[Route('/{id}/edit', name: 'app_book_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Book $book, BookRepository $bookRepository): Response
     {
@@ -65,6 +89,15 @@ class BookController extends AbstractController
     }
 
     //удалить книгу
+<<<<<<< HEAD
+=======
+    // Входные данные
+    // bookRepository
+    // book - (объект) конкретная книга, которую нужно удалить
+    // request - нужно для получения информации о залогинившемся пользователе
+    // Выходные данные
+    // Редирект на app_book_index
+>>>>>>> f07c1e0 (Initial commit)
     #[Route('/{id}', name: 'app_book_delete', methods: ['POST'])]
     public function delete(Request $request, Book $book, BookRepository $bookRepository): Response
     {
